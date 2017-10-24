@@ -24,8 +24,8 @@
 def match_ends(words):
     # +++your code here+++s
     contador = 0
-    for word in words:
-        if len(word) >= 2 and word[0] == word[-1]:
+    for w in words:
+        if len(w) >= 2 and w[0] == w[-1]:
             contador += 1
     return contador
 

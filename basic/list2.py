@@ -15,12 +15,16 @@
 # modify the passed in list.
 def remove_adjacent(nums):
     # +++your code here+++
-    listanova = []
-    for n in nums:
-        if n not in listanova:
-            listanova.append(n)
-    listanova.sort()
-    return listanova
+    if not nums:
+        return []
+
+    lista = [nums[0]]
+
+    for n, c in zip(nums[:-1],nums[1:]):
+        if c != n:
+            lista.append(c)
+    lista.sort()
+    return lista
 
 
 
